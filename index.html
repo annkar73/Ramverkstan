@@ -1,56 +1,84 @@
-<!doctype html>
+<!DOCTYPE html>
 
 <html>
-    <head>
-        <meta charset="utf-8">
+  <head>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+      charset="utf-8"
+    />
 
-        <title>Anna Karlsen | Portfolio</title>
+    <title>Anna Karlsen | Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <!-- Load external CSS styles -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
 
-        <!-- Load external CSS styles -->
-        <link rel="stylesheet" href="styles.css">
+  <body>
+    <header>
+        <div id="headerContent">
+        <h1>Anna Karlsen</h1>
+        <nav>
+            <ul>
+              <li><a href="#about">Om mig</a></li>
+              <li><a href="#projects">Projekt</a></li>
+              <li><a href="#contact">Kontakt</a></li>
+            </ul>
+          </nav>
+        </div>
+    </header>
+    
 
-    </head>
 
-    <body>
-
-        <h1>Anna Karlsen | Portfolio</h1>
-
-         <nav>
+    <section id="about" class="background">
+      <div class="content">
+        <h2>Om mig</h2>
+        <p>
+          En beskrivning av vad jag har lärt mig på utbildningen.
+          
+        </p>
+      </div>
+      <div class="about-sidebar">
+        <h3>Kurser</h3>
         <ul>
-            <li><a href="#about">Om mig</a></li>
-            <li><a href="#projects">Projekt</a></li>
-            <li><a href="#contact">Kontakt</a></li>
-        </ul>
-    </nav>
+            <li>HTML</li>
+            <li>CSS och SCSS</li>
+            <li>Grundkurs JavaScript</li>
+            <li>Agila metoder</li>
+            <li>API-utveckling</li>
+            <li>Arbetsmetodik</li>
+            <li>Grafisk design</li>
+            <li>UX/UI</li>
+            <li>Testning</li>
+            <li>Avancerad JavaScript</li>
 
-     <section id="about" class="background">
-            <div class="content">
-                <h2>Om mig</h2>
-        <p>Här kan du skriva en kort beskrivning av dig själv och dina färdigheter inom front end-utveckling.</p>
-            </div>
-        
+        </ul>
+
+      </div>
     </section>
 
     <section id="projects">
-        <h2>Projekt</h2>
-        <div id="project-list">
-            <!-- Här läggs dynamiskt till projekt med JavaScript -->
-        </div>
+      <h2>Projekt</h2>
+      <div id="project-list">
+        <!-- Här läggs dynamiskt till projekt med JavaScript -->
+      </div>
     </section>
 
     <section id="contact">
-        <h2>Kontakt</h2>
-        <p>Kontakta mig via e-post: <a href="mailto:din-email@example.com">din-email@example.com</a></p>
+      <h2>Kontakt</h2>
+      <p>
+        Kontakta mig via e-post:
+        <a href="mailto:din-email@example.com">din-email@example.com</a>
+      </p>
     </section>
 
     <footer>
-        <p>&copy; 2024 Anna Karlsen</p>
+      <p>&copy; 2024 Anna Karlsen</p>
     </footer>
 
-        
-        <!-- Load external JavaScript -->
-        <script src="scripts.js"></script>
-        
-    </body>
-
+    <!-- Load external JavaScript -->
+    <script src="script.js"></script>
+  </body>
 </html>

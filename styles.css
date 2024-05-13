@@ -1,37 +1,69 @@
-/* Place your CSS styles in this file */
-
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Josefin Sans', sans-serif;
     margin: 0;
     padding: 0;
+    color: #f2f2f2;
 }
 
 header, nav, section, footer {
     padding: 20px;
     margin-bottom: 20px;
 }
-h1 {
-        text-align: center;
-        color: #333;
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'EB Garamond', sans-serif;
 }
-h2 {
+
+header {
+    position: relative;
+    height: 300px; 
+    background-image: url('assets/mosaic.jpg'); 
+    background-size: cover;
+    background-position: center;
+    color: #f2f2f2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#headerContent {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100vw;
+    height: 150px;
+    padding: 20px;
+    background-color: rgba(13, 59, 79, 0.8);
     color: #f2f2f2;
 }
 
+#headerContent h1 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+}
+nav {
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+}
 nav ul {
     list-style-type: none;
     padding: 0;
-    display: flex;
 }
 
 nav ul li {
     display: inline;
+    margin-right: 20px;
 }
 
 nav a {
     text-decoration: none;
-    color: #333;
-    margin-right: 20px;
+    color: #f2f2f2;
 }
 
 nav a:hover {
@@ -45,41 +77,57 @@ nav ul li:not(:last-child) a::after {
     align-self: center;
 }
 
-#about {
-    position: relative;
-    height: 400px; 
-    background-image: url('assets/mosaic.jpg'); 
-    background-size: cover;
-    background-position: center;
+
+h2 {
     color: #f2f2f2;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 
+#about {
+    background-size: cover;
+    background-position: center;
+    background-color: rgba(13, 59, 79, 0.8);
+    color: #f2f2f2;
+}
+
 .content {
+    flex: 1;
     padding: 20px;
     max-width: 600px;
-    background-color: rgba(13, 59, 79, 0.8);
+}
+.about-sidebar {
+    background-color: #1f859d;
+    border: #f2f2f2 double 5px;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+.about-sidebar h3 {
+    margin-top: 0;
 }
 
 #projects {
     background-color: #0d3b4f;
     color: #f2f2f2;
 }
+
 .project-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    justify-content: center; /* Centrera kort horisontellt */
+    gap: 20px; /* Lägg till mellanrum mellan kort */
 }
 
 .project-item {
-    width: calc(50% - 20px);
-    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    background-color: #f2f2f2;
+    color: #0d3b4f;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
     padding: 20px;
-    border: #f2f2f2 solid 2px;
-    box-sizing: border-box;
+    margin-bottom: 20px;
+    box-sizing: border-box; /* Inkludera padding och border i den totala bredden */
 }
 .project-item h3 {
     margin-top: 0;
@@ -91,8 +139,24 @@ nav ul li:not(:last-child) a::after {
     margin: 0;
 }
 
+.project-image {
+    max-width: 250px;
+    margin-right: 20px;
+}
+
+.project-item img {
+    max-width: 250px;
+    max-height: 250px;
+    width: auto;
+    height: auto;
+}
+
+.project-content {
+    flex-grow: 1;
+}
+
 #contact {
-    background-color:#0d3b4f;
+    background-color: #0d3b4f;
     color: #f2f2f2;
 }
 
@@ -106,12 +170,30 @@ footer {
 /* Media query för desktop (skärmbredd över 768px) */
 @media only screen and (min-width: 768px) {
     /* Anpassa layout för desktop */
-    #projects {
-        display: flex;
-        flex-wrap: wrap;
+    .project-item {
+        flex-direction: row;
     }
 
-    #projects .project-item {
-        width: 50%; /* Dela upp projekt i två kolumner */
+    .project-image {
+        margin-right: 20px;
+    }
+
+    .project-content {
+        flex-grow: 0;
+    }
+
+    #about {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    .content {
+        flex: 1;
+        max-width: calc(70% - 20px);
+    }
+
+    .about-sidebar {
+        flex: 0 0 30%;
     }
 }
