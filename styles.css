@@ -1,0 +1,117 @@
+/* Place your CSS styles in this file */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header, nav, section, footer {
+    padding: 20px;
+    margin-bottom: 20px;
+}
+h1 {
+        text-align: center;
+        color: #333;
+}
+h2 {
+    color: #f2f2f2;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    margin-right: 20px;
+}
+
+nav a:hover {
+    color: #0532b8;
+}
+
+nav ul li:not(:last-child) a::after {
+    content: "|";
+    margin-left: 20px;
+    margin-right: 0;
+    align-self: center;
+}
+
+#about {
+    position: relative;
+    height: 400px; 
+    background-image: url('assets/mosaic.jpg'); 
+    background-size: cover;
+    background-position: center;
+    color: #f2f2f2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.content {
+    padding: 20px;
+    max-width: 600px;
+    background-color: rgba(13, 59, 79, 0.8);
+}
+
+#projects {
+    background-color: #0d3b4f;
+    color: #f2f2f2;
+}
+.project-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.project-item {
+    width: calc(50% - 20px);
+    margin: 20px;
+    padding: 20px;
+    border: #f2f2f2 solid 2px;
+    box-sizing: border-box;
+}
+.project-item h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.project-item p {
+    margin: 0;
+}
+
+#contact {
+    background-color:#0d3b4f;
+    color: #f2f2f2;
+}
+
+footer {
+    text-align: center;
+    background-color: #1f859d;
+    color: #fff;
+    padding: 10px 0;
+}
+
+/* Media query för desktop (skärmbredd över 768px) */
+@media only screen and (min-width: 768px) {
+    /* Anpassa layout för desktop */
+    #projects {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    #projects .project-item {
+        width: 50%; /* Dela upp projekt i två kolumner */
+    }
+}
