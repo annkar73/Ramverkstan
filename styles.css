@@ -67,7 +67,8 @@ nav a {
 }
 
 nav a:hover {
-    color: #0532b8;
+    color: goldenrod;
+    text-shadow: 0 0 5px gold;
 }
 
 nav ul li:not(:last-child) a::after {
