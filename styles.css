@@ -90,12 +90,15 @@ h2 {
     background-position: center;
     background-color: rgba(31, 133, 157, 0.5);
     color: #0d3b4f;
+    padding: 0;
 }
 
 .content {
     flex: 1;
     padding: 20px;
+    margin: 0;
     max-width: 600px;
+    background-color: #f2f2f2;
     color: #0d3b4f;
 }
 
@@ -108,7 +111,8 @@ h2 {
     color: #f2f2f2;
     border: #f2f2f2 double 5px;
     padding: 15px;
-    margin-top: 20px;
+    height: 100;
+    /* margin-top: 20px; */
 }
 
 .about-sidebar h3 {
@@ -199,6 +203,12 @@ footer {
         display: flex;
         justify-content: space-between;
         align-items: flex-start;
+    }
+
+    .content, .about-sidebar {
+        height: 100%;
+        display: flex;
+        flex: column;
     }
 
     .content {
