@@ -84,7 +84,7 @@ nav a {
 }
 
 nav a:hover {
-    color: goldenrod;
+    font-weight: 900;
 }
 
 nav ul li:not(:last-child) a::after {
