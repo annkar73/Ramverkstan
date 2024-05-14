@@ -1,18 +1,33 @@
 body {
+
     font-family: 'Josefin Sans', sans-serif;
     margin: 0;
     padding: 0;
     /* color: #f2f2f2; */
 }
 
-header, nav, section, footer {
+header, section, footer {
     padding: 20px;
-    margin-bottom: 5px;
+  /*  margin-bottom: 5px; */
 }
 
 h1, h2, h3, h4, h5, h6 {
     font-family: 'EB Garamond', sans-serif;
 }
+
+#stickyNav {
+    position: fixed;
+    top: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 100%;
+    background-color: #1f859d;
+    z-index: 1000;
+}
+
 
 header {
     position: relative;
@@ -33,7 +48,7 @@ header {
     left: 50%;
     transform: translate(-50%, -50%);
     width: 100vw;
-    height: 100px;
+    height: auto;
     padding: 20px;
     background-color: rgba(13, 59, 79, 0.8);
     color: #f2f2f2;
@@ -46,6 +61,7 @@ header {
     font-weight: 800;
     text-align: center;
 }
+
 nav {
     text-align: center;
     font-family: 'Roboto', sans-serif;
@@ -69,7 +85,6 @@ nav a {
 
 nav a:hover {
     color: goldenrod;
-  /*  text-shadow: 0 0 5px gold; */
 }
 
 nav ul li:not(:last-child) a::after {
@@ -98,7 +113,6 @@ h2 {
     padding: 20px;
     margin: 0;
     max-width: 600px;
-    background-color: #f2f2f2;
     color: #0d3b4f;
 }
 
@@ -109,10 +123,8 @@ h2 {
 .about-sidebar {
     background-color: #1f859d;
     color: #f2f2f2;
-    border: #f2f2f2 double 5px;
     padding: 15px;
-    height: 100;
-    /* margin-top: 20px; */
+    height: 100%;
 }
 
 .about-sidebar h3 {
@@ -218,5 +230,7 @@ footer {
 
     .about-sidebar {
         flex: 0 0 30%;
+        border-left: #f2f2f2 solid 5px;
+
     }
 }
