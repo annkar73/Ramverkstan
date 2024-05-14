@@ -65,6 +65,7 @@ header {
 nav {
     text-align: center;
     font-family: 'Roboto', sans-serif;
+    font-weight: 600;
     text-transform: uppercase;
     margin-bottom: 5px;
 }
@@ -106,9 +107,12 @@ h2 {
     background-color: rgba(31, 133, 157, 0.5);
     color: #0d3b4f;
     padding: 0;
+    
 }
 
 .content {
+    display: flex;
+    flex-direction: column;
     flex: 1;
     padding: 20px;
     margin: 0;
@@ -121,14 +125,17 @@ h2 {
 }
 
 .about-sidebar {
+    display: flex;
+    flex-direction: column;
     background-color: #1f859d;
     color: #f2f2f2;
     padding: 15px;
     height: 100%;
 }
 
-.about-sidebar h3 {
+.about-sidebar h2 {
     margin-top: 0;
+    margin-bottom: 10px;
 }
 
 #projects {
