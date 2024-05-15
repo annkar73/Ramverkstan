@@ -111,9 +111,7 @@ h2 {
     color: #0d3b4f;
     padding: 0;
     display: flex;
-    flex-direction: column;
-    
-    
+    flex-direction: column; 
 }
 
 .content {
@@ -152,6 +150,21 @@ h2 {
 .about-sidebar h2 {
     margin-top: 0;
     margin-bottom: 10px;
+}
+
+.coursesList {
+    list-style-type: none;
+    padding: 0;
+}
+.coursesList li {
+    margin-bottom: 10px;
+}
+ul.coursesList li:before {
+    content: "\2605";
+    color: goldenrod;
+    font-weight: 900;
+    margin-right: 10px;
+    text-shadow: 0 0 10px rgba(255, 255, 200, 0.5);
 }
 
 #projects {
