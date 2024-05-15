@@ -9,6 +9,12 @@ document.addEventListener("DOMContentLoaded", function() {
 
     let projectList = document.getElementById("project-list");
 
+    function goToGitHub(event) {
+        let projectIndex = event.target.dataset.projectIndex;
+        let project = projects[projectIndex];
+        window.open(project.gitHubLink, '_blank');
+    }
+
     projects.forEach(function(project) {
         let projectItem = document.createElement("div");
         projectItem.classList.add("project-item"); 
@@ -27,9 +33,11 @@ document.addEventListener("DOMContentLoaded", function() {
         let projectDescription = document.createElement("p");
         projectDescription.textContent = project.description;
 
-        let githubLink = document.createElement("a");
-        githubLink.href = project.githubLink;
+        let githubLink = document.createElement("button");
         githubLink.textContent = "GitHub Repo";
+        githubLink.classList.add("github-button");            
+        githubLink.dataset.projectIndex = index;
+        githubLink.addEventListener("click", goToGitHub);
 
         let projectContent = document.createElement("div");
         projectContent.classList.add("project-content");
