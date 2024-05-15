@@ -207,6 +207,7 @@ ul.coursesList li:before {
 .project-image {
     max-width: 250px;
     margin-right: 20px;
+    align-self: center;
 }
 
 .project-item img {

@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function() {
         window.open(project.gitHubLink, '_blank');
     }
 
-    projects.forEach(function(project) {
+    projects.forEach(function(project, index) {
         let projectItem = document.createElement("div");
         projectItem.classList.add("project-item"); 
 
