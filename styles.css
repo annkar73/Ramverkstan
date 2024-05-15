@@ -211,11 +211,17 @@ ul.coursesList li:before {
 .project-item p {
     margin: 0;
 }
-
 .project-image {
+    
     max-width: 250px;
     margin-right: 20px;
+    align-items: center;
+    position: relative;
+
+}
+.project-figure {
     align-self: center;
+    margin: 0;
 }
 
 .project-item img {
@@ -224,6 +230,16 @@ ul.coursesList li:before {
     width: auto;
     height: auto;
 }
+.image-caption {
+    position: absolute;
+    bottom: 7px;
+    left: 2px;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 3px;
+    font-style: italic;
+    font-size: small;
+}
+
 .project-item button {
     background-color: #8B0000;
     color: #f2f2f2;
@@ -232,6 +248,7 @@ ul.coursesList li:before {
     border: none;
     margin-top: 10px;
     padding: 5px;
+    cursor: pointer;
 
 }
 .project-item button:hover {
