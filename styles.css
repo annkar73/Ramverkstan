@@ -163,12 +163,20 @@ h2 {
 .coursesList li {
     margin-bottom: 10px;
 }
+
 ul.coursesList li:before {
     content: "\2605";
     color: goldenrod;
     font-weight: 900;
     margin-right: 10px;
     text-shadow: 0 0 10px rgba(255, 255, 200, 0.5);
+}
+.highlighted-text {
+    background-color: #0d3b4f;
+    color: goldenrod;
+    padding: 2px 7px 2px 5px;
+    border: goldenrod ridge 2px;
+
 }
 
 #projects {
