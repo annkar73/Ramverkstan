@@ -27,7 +27,7 @@ h1, h2, h3, h4, h5, h6 {
     align-items: center;
     height: 50px;
     width: 100%;
-    background-color: #1f859d;
+    background-color: #5a5a5a;
     z-index: 1000;
 }
 
@@ -35,7 +35,7 @@ h1, h2, h3, h4, h5, h6 {
 header {
     position: relative;
     height: 300px; 
-    background-image: url('assets/mosaic.jpg'); 
+    background-image: url('assets/colorful.jpg'); 
     background-size: cover;
     background-position: center;
     color: #f2f2f2;
@@ -53,7 +53,7 @@ header {
     width: 100vw;
     height: auto;
     padding: 20px;
-    background-color: rgba(13, 59, 79, 0.8);
+    background-color: rgba(133, 94, 66, 0.8);
     color: #f2f2f2;
     text-align: center;
 }
@@ -113,8 +113,8 @@ h2 {
 #about {
     background-size: cover;
     background-position: center;
-    background-color: rgba(31, 133, 157, 0.5);
-    color: #0d3b4f;
+    background-color: rgba(192, 192, 192, 0.5);
+    color: #333;
     padding: 0;
     display: flex;
     flex-direction: column; 
@@ -126,11 +126,11 @@ h2 {
     flex: 1;
     padding: 15px 20px 15px 20px;
     max-width: 600px;
-    color: #0d3b4f;
+    color: #333;
 }
 
 .content h2 {
-    color: #0d3b4f;
+    color: #333;
 }
 
 .aboutArticle {
@@ -142,10 +142,38 @@ h2 {
     margin-bottom: 10px;
 }
 
+.gallery-container {
+    position: relative;
+    max-width: 100%;
+    height: 200px;
+    margin: auto;
+    overflow: hidden;
+}
+.gallery-slide {
+    display: none;
+    width: 100%;
+    height: 100%;
+}
+.gallery-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+}
+/* animering */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+@keyframes fade {
+    from { opacity: 0.4; }
+    to { opacity: 1;}
+}
+
 .about-sidebar {
     display: flex;
     flex-direction: column;
-    background-color: #1f859d;
+    background-color: #5a5a5a;
     color: #f2f2f2;
     padding: 15px 15px 15px 25px;
     height: 100%;
@@ -156,32 +184,25 @@ h2 {
     margin-bottom: 10px;
 }
 
-.coursesList {
+.sidebarList {
     list-style-type: none;
     padding: 0;
 }
-.coursesList li {
+.sidebarList > li {
     margin-bottom: 10px;
 }
 
-ul.coursesList li:before {
+ul.sidebarList li.month:before {
     content: "\2605";
     color: goldenrod;
     font-weight: 900;
     margin-right: 10px;
     text-shadow: 0 0 10px rgba(255, 255, 200, 0.5);
 }
-.highlighted-text {
-    background-color: #0d3b4f;
-    color: goldenrod;
-    padding: 2px 7px 2px 5px;
-    border: goldenrod ridge 2px;
-
-}
 
 #projects {
-    background-color: #0d3b4f;
-    color: #f2f2f2;
+    background-color: #8c7a6b;
+    color: #333;
 }
 
 .project-list {
@@ -195,7 +216,7 @@ ul.coursesList li:before {
     display: flex;
     flex-direction: column;
     background-color: #f2f2f2;
-    color: #0d3b4f;
+    color: #333;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     padding: 20px;
@@ -258,17 +279,17 @@ ul.coursesList li:before {
 }
 
 #contact {
-    background-color: rgba(31, 133, 157, 0.5);
-    color: #0d3b4f;
+    background-color: rgba(192, 192, 192, 0.5);
+    color: #333;
 }
 
 #contact h2 {
-    color: #0d3b4f;
+    color: #333;
 }
 
 footer {
     text-align: center;
-    background-color: #1f859d;
+    background-color: #5a5a5a;
     color: #fff;
     padding: 10px 0;
 }
@@ -276,6 +297,10 @@ footer {
 /* Media query för desktop (skärmbredd över 768px) */
 @media only screen and (min-width: 768px) {
     /* Anpassa layout för desktop */
+    .gallery-container {
+        height: 300px;
+        max-width: 600px;
+    }
     .project-item {
         flex-direction: row;
         align-items: flex-start;

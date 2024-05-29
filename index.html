@@ -8,7 +8,7 @@
       charset="utf-8"
     />
 
-    <title>Anna Karlsen | Portfolio</title>
+    <title>Ramverkstan | Galleri Ekman</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
@@ -20,17 +20,17 @@
     <div id="stickyNav">
       <nav>
           <ul>
-            <li><a href="#about">Om mig</a></li>
-            <li><a href="#projects">Projekt</a></li>
-            <li><a href="#contact">Kontakt</a></li>
+            <li><a href="#about">Inramningar</a></li>
+            <li><a href="#projects">Konstförsäljning</a></li>
+            <li><a href="#contact">Galleri Ekman</a></li>
           </ul>
         </nav>
       </div>
 
     <header>
         <div id="headerContent">
-        <h1>Anna Karlsen</h1>
-        <h2>Portfolio</h2>
+        <h1>Ramverkstan</h1>
+        <h2>Galleri Ekman</h2>
       </div>
         
     </header>
@@ -39,46 +39,94 @@
 
     <section id="about" class="background">
       <div class="content">
-        <h2>Om mig</h2>
+        <h2>Om oss</h2>
         <div class="aboutArticle">
-          Efter ett mycket varierande arbetsliv som har gett mig många erfarenheter genom åren har jag nu slutligen bestämt mig för att vidareutveckla ett intresse jag har haft länge, men aldrig riktigt tagit tag i tidigare - 
-          jag går sedan oktober 2024 Medieinstitutets 2-åriga YH-utbildning inom Front End Development.
-        </div>
-        <div class="aboutInfo">
-          Utbildningen är designad för att ge oss bred kunskap och praktiska färdigheter som krävs för att bygga moderna, responsiva och användarvänliga webbapplikationer och omfattar flera viktiga ämnesområden och kurser som ger en holistisk förståelse för front end-utveckling.
+          Här lägger man in en massa information om företaget. Historik, lite historia om gården det ligger på och kanske något om var det har legat tidigare om det är gamla kunder som har letat sig tillbaka och kanske lite kort om de olika verksamheterna som ingår. Det var tal om lite bilder som ett galleri som bläddrar sig fram, och det kan vara lämpligt att ha på förstasidan så det händer något där. 
+         
+          <!-- Bildgalleri börjar här -->
+          <div class="gallery-container">
 
-        </div>
-        <div class="aboutInfo">
-          Inom varje kursmoment ingår arbete både enskilt och i grupp för att vi på detta vis ska få erfarenhet av att samarbeta på olika sätt i projekt av varierande storlek och med olika sammansättningar.
-        </div>
-        <div class="aboutInfo">
-          Utbildningen är mycket omfattande och ger mig och mina klasskamrater en solid grund inom front end-utveckling. Genom att kombinera teoretisk undervisning med praktiska projekt har vi fått de färdigheter som behövs för att lyckas i en karriär som Front End Developer. 
+            <div class="gallery-slide fade">
+              <img src="./assets/gallery-slide/image1.jpg" alt="Image 1">
+            </div>
+
+            <div class="gallery-slide fade">
+              <img src="./assets/gallery-slide/image2.jpg" alt="Image 2">
+            </div>
+
+            <div class="gallery-slide fade">
+              <img src="./assets/gallery-slide/image3.jpg" alt="Image 3">
+            </div>
+
+            <div class="gallery-slide fade">
+              <img src="./assets/gallery-slide/image4.jpg" alt="Image 4">
+            </div>
+
+            <div class="gallery-slide fade">
+              <img src="./assets/gallery-slide/image5.jpg" alt="Image 5">
+            </div>
+
+          </div>
+          <!-- Bildgalleri slutar här -->
           <p>
-            <strong>
-          Jag ser fram emot att fortsätta utvecklas och använda mina kunskaper för att skapa innovativa och användarvänliga webbapplikationer.
-        </strong>
+            Dessutom är den här rutan tänkt som en slags behållare för allt innehåll så när man väljer något i menyn så öppnas det här istället för att hoppa längre ner på sidan. Ett annat alternativ som kanske är enklare för en del är att låta sidan fortsätta nedåt så man KAN scrolla vidare om man vill - på det viset är det mindre risk att kunderna missar något för att de inte klickar sig rätt i menyn. Men det är en smaksak
           </p>
         </div>
       </div>
       <div class="about-sidebar">
-        <h2>Kurser som ingår</h2>
-        <ul class="coursesList">
-            <li>HTML</li>
-            <li>CSS och SCSS</li>
-            <li>Grundkurs JavaScript</li>
-            <li>Agila metoder</li>
-            <li>API-utveckling</li>
-            <li>Arbetsmetodik</li>
-            <li>Grafisk design</li>
-            <li>UX/UI</li>
-            <li>Testning <em class="highlighted-text">&#8592; här är vi nu</em></li>
-            <li>Avancerad JavaScript</li>
-            <li>Lärande i Arbete (LIA) 1 - Praktikperiod</li>
-            <li>Examensarbete</li>
-            <li>Lärande i Arbete (LIA) 2 - Praktikperiod</li>
-
+        <h2>Utställningskalender</h2>
+        <p>Här kan man välja att antingen bara ha "senaste nytt" eller kanske använda det som en kalender för årets utställningar. Ligger det direkt i html är det enkelt att lägga till när något dyker upp på en tidigare ledig tid eller om en utställning av någon anledning blir inställd.</p>
+      
+        <p>Två olika alternativ alltså, som kan se ut på ungefär det här viset:</p>
+        <ul class="sidebarList">
+          <!-- så här kan man kommentera ut kod så man kan dölja tex passerade månader utan att ta bort koden helt -->
+          <!-- <li class="month"><strong>Januari</strong>
+            <ul>
+            <li><strong>1-14:</strong> Utställning 1 | Utställare - Lilla Galleriet</li>
+            <li>1-31: Utställning 2 | Utställare - Stora Galleriet</li>
+          </ul>
+          </li> -->
+          <li class="month"><strong>Februari</strong>
+            <ul>
+            <li>Utställning 1 - Lilla Galleriet</li>
+            <li>Utställning 2 - Stora Galleriet</li>
+          </ul>
+          </li>
+          <li class="month"><strong>Mars</strong>
+            <ul>
+            <li>Utställning 1 - Lilla Galleriet</li>
+            <li>Utställning 2 - Stora Galleriet</li>
+          </ul>
+          </li>
+          <li class="month"><strong>April</strong>
+            <ul>
+            <li>Utställning 1 - Lilla Galleriet</li>
+            <li>Utställning 2 - Stora Galleriet</li>
+          </ul>
+          </li>
         </ul>
+        <div><h3>Vårens utställningar</h3>
+          <strong>1 januari - 15 januari:</strong> Namn på utställning | Utställare - Lilla Galleriet
+          <br>
+          <strong>7 januari - 23 januari:</strong> Namn på utställning  | Utställare - Stora Galleriet
+          <br>
+          <strong>20 januari - 7 februari:</strong> Namn på utställning  | Utställare - Lilla Galleriet
+          <br>
+          <strong>25 januari - 20 februari:</strong> Namn på utställning  | Utställare - Lilla Galleriet
 
+
+
+        </div>
+        <div><h3>Sommarens utställningar</h3></div>
+        Samma uppställning som ovan
+        <div><h3>Höstens utställningar</h3></div>
+        Samma uppställning som ovan
+        <div><h3>Vinterns utställningar</h3></div>
+        Samma uppställning som ovan
+        <div><h3>Julsalong</h3></div>
+        Information om julsalongen och vilka utställare som deltar
+
+      
       </div>
     </section>
 
@@ -92,13 +140,18 @@
     <section id="contact">
       <h2>Kontakt</h2>
       <p>
-        Kontakta mig via e-post:
+        Kontakta oss via e-post:
         <a href="mailto:din-email@example.com">din-email@example.com</a>
       </p>
+      <p>
+        Kontakta oss via telefon:
+        <a href="mailto:din-email@example.com">din-email@example.com</a>
+      </p>
+
     </section>
 
     <footer>
-      <p>&copy; 2024 Anna Karlsen</p>
+      <p>&copy; 2024 Ramverkstan</p>
     </footer>
 
     <!-- Load external JavaScript -->

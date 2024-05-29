@@ -1,19 +1,13 @@
 document.addEventListener("DOMContentLoaded", function() {
     let projects = [
-        { name: "Projekt 1", description: "En kort beskrivning av Projekt 1.", image:"assets/image1.png", caption: "En bild av Projekt 1", gitHubLink: "https://github.com/username/project1" },
-        { name: "Projekt 2", description: "En kort beskrivning av Projekt 2.", image:"assets/image2.png", caption: "En bild av Projekt 2", gitHubLink: "https://github.com/username/project2" },
-        { name: "Projekt 3", description: "En kort beskrivning av Projekt 3.", image:"assets/image3.png", caption: "En bild av Projekt 3", gitHubLink: "https://github.com/username/project3" },
+        { name: "Projekt 1", description: "En kort beskrivning av Projekt 1.", image:"assets/image1.png", caption: "En bild av Projekt 1" },
+        { name: "Projekt 2", description: "En kort beskrivning av Projekt 2.", image:"assets/image2.png", caption: "En bild av Projekt 2"},
+        { name: "Projekt 3", description: "En kort beskrivning av Projekt 3.", image:"assets/image3.png", caption: "En bild av Projekt 3"},
 
         // Lägg till fler projekt här
     ];
 
     let projectList = document.getElementById("project-list");
-
-    function goToGitHub(event) {
-        let projectIndex = event.target.dataset.projectIndex;
-        let project = projects[projectIndex];
-        window.open(project.gitHubLink, '_blank');
-    }
 
     projects.forEach(function(project, index) {
         let projectItem = document.createElement("div");
@@ -38,17 +32,10 @@ document.addEventListener("DOMContentLoaded", function() {
         let projectDescription = document.createElement("p");
         projectDescription.textContent = project.description;
 
-        let githubLink = document.createElement("button");
-        githubLink.textContent = "Se repo på gitHub";
-        githubLink.classList.add("github-button");            
-        githubLink.dataset.projectIndex = index;
-        githubLink.addEventListener("click", goToGitHub);
-
         let projectContent = document.createElement("div");
         projectContent.classList.add("project-content");
         projectContent.appendChild(projectName);
         projectContent.appendChild(projectDescription);
-        projectContent.appendChild(githubLink);
 
         
         projectFigure.appendChild(projectImage);
@@ -62,3 +49,20 @@ document.addEventListener("DOMContentLoaded", function() {
         projectList.appendChild(projectItem);
     });
 });
+
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+    let i;
+    let slides = document.getElementsByClassName('gallery-slide');
+
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = 'none';
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) { slideIndex = 1; }
+
+    slides[slideIndex - 1].style.display = 'block';
+    setTimeout(showSlides, 4000);
+}
