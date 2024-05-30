@@ -6,9 +6,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
         // Lägg till fler projekt här
     ];
-
+// hamburgarmenyns beteende i mobil
     document.getElementById("menu-toggle").addEventListener("click", function() {
-        var menu = document.getElementById("menu");
+        let menu = document.getElementById("menu");
         if (menu.classList.contains("menu-closed")) {
             menu.classList.remove("menu-closed");
             menu.classList.add("menu-open");
@@ -17,7 +17,17 @@ document.addEventListener("DOMContentLoaded", function() {
             menu.classList.add("menu-closed");
         }
     });
+    document.addEventListener("DOMContentLoaded", function() {
+        const menuToggle = document.getElementById('menu-toggle');
+        const navUl = document.querySelector('nav ul');
 
+        menuToggle.addEventListener('click', function() {
+            navUl.classList.toggle('menu-open');
+        });
+    });
+// slut på hantering av hamburgarmeny
+
+// lägger till innehåll från arrayen projects i projektlistan
     let projectList = document.getElementById("project-list");
 
     projects.forEach(function(project, index) {
@@ -77,3 +87,5 @@ function showSlides() {
     slides[slideIndex - 1].style.display = 'block';
     setTimeout(showSlides, 4000);
 }
+
+// slut på infogande i projektlistan
