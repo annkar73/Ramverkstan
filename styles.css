@@ -332,6 +332,10 @@ footer {
         display: none;
     }
 
+    .mainNav {
+        justify-items: center;
+    }
+
     nav ul {
         display: flex;
         flex-direction: row;
@@ -359,7 +363,6 @@ footer {
         margin-right: 0;
         align-self: center;
     }
-    }
     #about {
         display: flex;
         flex-direction: row;
@@ -382,6 +385,8 @@ footer {
     .gallery-container {
         height: 300px;
         max-width: 600px;
+        margin-top: 15px;
+        margin-bottom: 15px;
     }
     .project-item {
         flex-direction: row;
@@ -396,6 +401,8 @@ footer {
     .project-content {
         flex-grow: 1;
         margin-left: 20px;
+    }
+
     }
 
 /* Återgå till ursprunglig layout för mobil (mindre än 768px) */
