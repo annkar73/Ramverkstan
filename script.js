@@ -7,6 +7,17 @@ document.addEventListener("DOMContentLoaded", function() {
         // Lägg till fler projekt här
     ];
 
+    document.getElementById("menu-toggle").addEventListener("click", function() {
+        var menu = document.getElementById("menu");
+        if (menu.classList.contains("menu-closed")) {
+            menu.classList.remove("menu-closed");
+            menu.classList.add("menu-open");
+        } else {
+            menu.classList.remove("menu-open");
+            menu.classList.add("menu-closed");
+        }
+    });
+
     let projectList = document.getElementById("project-list");
 
     projects.forEach(function(project, index) {

@@ -23,12 +23,22 @@ h1, h2, h3, h4, h5, h6 {
     top: 0;
     padding: 0;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     height: 50px;
     width: 100%;
     background-color: #5a5a5a;
     z-index: 1000;
+}
+#menu-toggle {
+    display: block;
+    font-size: 24px;
+    background: none;
+    color: #f2f2f2;
+    cursor: pointer;
+    padding: 0 20px;
+    border: none;
+    margin-right: auto;
 }
 
 
@@ -78,32 +88,42 @@ nav {
     text-transform: uppercase;
     margin-bottom: 5px;
 }
+
 nav ul {
+    display: none;
     list-style-type: none;
     padding: 0;
+    margin: 0;
+    flex-direction: column;
+    text-align: left;
+    background-color: #5a5a5a;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    width: 100%;
 }
 
 nav ul li {
-    display: inline;
-    margin-right: 20px;
+    display: block;
+    margin: 0;
+    padding: 10px 20px;
 }
 
-nav a {
+nav ul li a {
+    display: block;
+    width: 100%;
     text-decoration: none;
     color: #f2f2f2;
 }
 
-nav a:hover {
-    font-weight: 900;
+
+.menu-open {
+    display: flex;
 }
 
-nav ul li:not(:last-child) a::after {
-    content: "|";
-    margin-left: 20px;
-    margin-right: 0;
-    align-self: center;
+.menu-closed {
+    display: none;
 }
-
 
 h2 {
     color: #f2f2f2;
@@ -117,7 +137,9 @@ h2 {
     color: #333;
     padding: 0;
     display: flex;
-    flex-direction: column; 
+    flex-direction: row;
+    align-items: flex-start; 
+
 }
 
 .content {
@@ -127,6 +149,11 @@ h2 {
     padding: 15px 20px 15px 20px;
     max-width: 600px;
     color: #333;
+    margin: auto;
+    align-items: flex-start;
+    margin-top: 0;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 .content h2 {
@@ -136,10 +163,13 @@ h2 {
 .aboutArticle {
     font-weight: 600;
     margin-bottom: 10px;
+    width: 100%;
+    margin-top: 0;
 }
 
 .aboutInfo {
     margin-bottom: 10px;
+
 }
 
 .gallery-container {
@@ -177,6 +207,7 @@ h2 {
     color: #f2f2f2;
     padding: 15px 15px 15px 25px;
     height: 100%;
+    margin: auto;
 }
 
 .about-sidebar h2 {
@@ -221,7 +252,7 @@ ul.sidebarList li.month:before {
     border-radius: 8px;
     padding: 20px;
     margin-bottom: 20px;
-    box-sizing: border-box; /* Inkludera padding och border i den totala bredden */
+    box-sizing: border-box; 
 }
 .project-item h3 {
     margin-top: 0;
@@ -296,7 +327,58 @@ footer {
 
 /* Media query för desktop (skärmbredd över 768px) */
 @media only screen and (min-width: 768px) {
-    /* Anpassa layout för desktop */
+    /* Anpassad layout för desktop */
+    #menu-toggle {
+        display: none;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: row;
+        position: static;
+        background-color: transparent;
+    }
+
+    nav ul li {
+        display: inline;
+        padding: 0;
+        margin-right: 20px;
+    }
+
+    nav ul li a {
+        width: auto;
+    }
+
+    nav a:hover {
+        font-weight: 900;
+    }
+    
+    nav ul li:not(:last-child) a::after {
+        content: "|";
+        margin-left: 20px;
+        margin-right: 0;
+        align-self: center;
+    }
+    }
+    #about {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+
+    }
+
+    .content {
+        max-width: calc(70% - 20px);
+        height: auto;
+        align-items: flex-start;
+
+    }
+
+    .about-sidebar {
+        flex: 0 0 30%;
+        height: auto;
+
+    }
     .gallery-container {
         height: 300px;
         max-width: 600px;
@@ -316,21 +398,20 @@ footer {
         margin-left: 20px;
     }
 
+/* Återgå till ursprunglig layout för mobil (mindre än 768px) */
+@media only screen and (max-width: 767px) {
     #about {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: stretch;
+        flex-direction: column; /* Återgå till kolumnlayout för mobil */
     }
 
     .content {
-        max-width: calc(70% - 20px);
-        height: auto;
+        max-width: 100%; /* Återgå till full bredd för innehåll */
+        margin-right: 0; /* Återställ marginal för mobilvy */
     }
 
     .about-sidebar {
-        flex: 0 0 30%;
+        flex: 0 0 100%; /* Använd hela bredden för sidebaren i mobilvy */
         height: auto;
-        border-left: #f2f2f2 solid 5px;
-
     }
 }
+
