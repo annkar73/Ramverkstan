@@ -317,6 +317,11 @@ ul.sidebarList li.month:before {
 #contact h2 {
     color: #333;
 }
+#closed {
+        color: darkred;
+}
+
+
 
 footer {
     text-align: center;
@@ -405,7 +410,15 @@ footer {
         margin-left: 20px;
     }
 
+    #contactInfo {
+        display: flex;
+        flex-direction: row;
+        column-gap: 25px;
+        justify-content:stretch;
+    }    
+
     }
+    
 
 /* Återgå till ursprunglig layout för mobil (mindre än 768px) */
 @media only screen and (max-width: 767px) {
