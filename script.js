@@ -1,9 +1,9 @@
 
 document.addEventListener("DOMContentLoaded", function() {
     let projects = [
-        { name: "Projekt 1", description: "En kort beskrivning av Projekt 1.", image:"assets/image1.png", caption: "En bild av Projekt 1" },
-        { name: "Projekt 2", description: "En kort beskrivning av Projekt 2.", image:"assets/image2.png", caption: "En bild av Projekt 2"},
-        { name: "Projekt 3", description: "En kort beskrivning av Projekt 3.", image:"assets/image3.png", caption: "En bild av Projekt 3"},
+        { name: "Titel på utställning 1", description: "En kort beskrivning av utställning 1, kanske med en presentation av konstnären och vad hen har gjort tidigare.", image:"assets/image1.png", caption: "Bild från utställning 1"},
+        { name: "Titel på utställning 2", description: "En kort beskrivning av utställning 2, kanske med en presentation av konstnären och vad hen har gjort tidigare.", image:"assets/image2.png", caption: "Bild från utställning 2"},
+        { name: "Titel på utställning 3", description: "En kort beskrivning av utställning 3, kanske med en presentation av konstnären och vad hen har gjort tidigare.", image:"assets/image3.png", caption: "Bild från utställning 3"},
 
         // Lägg till fler projekt här
     ];
@@ -15,16 +15,17 @@ document.addEventListener("DOMContentLoaded", function() {
     menuToggle.addEventListener('click', function () {
         console.log('Menu toggle clicked');
         if (menu.classList.contains("menu-closed")) {
-            console.log('Menu is closed, open it');
+            console.log('Menu is closed, opening it');
             menu.classList.remove("menu-closed");
             menu.classList.add("menu-open");
             console.log('Menu has been opened');
         } else {
-            console.log('Menu is open, close it');
+            console.log('Menu is open, closing it');
             menu.classList.remove("menu-open");
             menu.classList.add("menu-closed");
             console.log('menu has been closed');
         }
+        console.log('menu classes:', menu.classList);
     });
 // slut på hantering av hamburgarmeny
 
