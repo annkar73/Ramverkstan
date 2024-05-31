@@ -1,3 +1,4 @@
+
 document.addEventListener("DOMContentLoaded", function() {
     let projects = [
         { name: "Projekt 1", description: "En kort beskrivning av Projekt 1.", image:"assets/image1.png", caption: "En bild av Projekt 1" },
@@ -7,23 +8,23 @@ document.addEventListener("DOMContentLoaded", function() {
         // Lägg till fler projekt här
     ];
 // hamburgarmenyns beteende i mobil
-    document.getElementById("menu-toggle").addEventListener("click", function() {
-        let menu = document.getElementById("menu");
+    console.log('javascript loaded');
+    const menuToggle = document.getElementById('menu-toggle');
+    const menu = document.querySelector('#mainNav ul');
+
+    menuToggle.addEventListener('click', function () {
+        console.log('Menu toggle clicked');
         if (menu.classList.contains("menu-closed")) {
+            console.log('Menu is closed, open it');
             menu.classList.remove("menu-closed");
             menu.classList.add("menu-open");
+            console.log('Menu has been opened');
         } else {
+            console.log('Menu is open, close it');
             menu.classList.remove("menu-open");
             menu.classList.add("menu-closed");
+            console.log('menu has been closed');
         }
-    });
-    document.addEventListener("DOMContentLoaded", function() {
-        const menuToggle = document.getElementById('menu-toggle');
-        const navUl = document.querySelector('nav ul');
-
-        menuToggle.addEventListener('click', function() {
-            navUl.classList.toggle('menu-open');
-        });
     });
 // slut på hantering av hamburgarmeny
 
