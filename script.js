@@ -72,7 +72,8 @@ document.addEventListener("DOMContentLoaded", function() {
         projectList.appendChild(projectItem);
     });
 });
-
+// slut på infogande i projektlistan
+// hantering av bildserie på förstasidan
 let slideIndex = 0;
 showSlides();
 
@@ -89,5 +90,4 @@ function showSlides() {
     slides[slideIndex - 1].style.display = 'block';
     setTimeout(showSlides, 4000);
 }
-
-// slut på infogande i projektlistan
+// slut på hantering av bildserie på förstasidan
